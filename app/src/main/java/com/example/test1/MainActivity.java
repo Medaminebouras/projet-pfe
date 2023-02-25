@@ -30,9 +30,6 @@ EditText TextName ;
                         Toast.makeText(getApplicationContext(), "nom et obligatoire", Toast.LENGTH_LONG).show();
                     }
 
-
-
-
             }
         });
     }

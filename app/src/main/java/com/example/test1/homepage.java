@@ -15,7 +15,7 @@ import android.widget.ProgressBar;
 public class homepage extends AppCompatActivity {
  private int prog =0;
  private Button button_incr;
-    private ProgressBar progress_bar;
+    ProgressBar progress_bar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +34,7 @@ public class homepage extends AppCompatActivity {
 
             }
         });
+
     }
 
 }
