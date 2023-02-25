@@ -1,11 +1,14 @@
 package com.example.test1;
 
+import static com.example.test1.R.id.button_con;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
@@ -14,6 +17,10 @@ import com.example.test1.ui.LoginTask;
 import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity {
+    private TextView Erreurmessage;
+    private EditText TextName;
+    private EditText TextPassword;
+    private Button button_con;
     Button button;
     EditText t;
     Toolbar toolbar;
@@ -26,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         button = (Button) findViewById(R.id.button_con);
         t = (EditText) findViewById(R.id.TextName);
+        Erreurmessage=findViewById(R.id.Erreurmessage);
         LoginTask dbTask = new LoginTask();
 
         button.setOnClickListener(new View.OnClickListener() {
