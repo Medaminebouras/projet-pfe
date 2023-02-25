@@ -7,26 +7,43 @@
      android:icon="@drawable/home_24"/>
  <item
      android:id="@+id/nav_client"
-     android:title="home"
+     android:title="Client"
      android:icon="@drawable/person_black"/>
  <item
     android:id="@+id/nav_stock"
-    android:title="home"
+    android:title="Stock"
     android:icon="@drawable/stock"/>
 
  <item
     android:id="@+id/nav_challenge"
-    android:title="home"
+    android:title="Challenge"
     android:icon="@drawable/competition_removebg_preview"/>
  <item
     android:id="@+id/nav_commande"
     android:title="home"
-    android:icon="@drawable/home_24"/>
+    android:icon="@drawable/commande_removebg_preview"/>
  <item
     android:id="@+id/nav_produit"
     android:title="home"
-    android:icon="@drawable/home_24"/>
+    android:icon="@drawable/product_removebg_preview"/>
 
 </group>
+ <item android:title="communication">
+  <menu>
+   <item
+       android:id="@+id/nav_share"
+       android:title="home"
+       android:icon="@drawable/share_24"/>
+   <item
+       android:id="@+id/nav_rate"
+       android:title="home"
+       android:icon="@drawable/rate_review_24"/>
+  </menu>
+
+
+ </item>
+
+
+
 
 </menu>
