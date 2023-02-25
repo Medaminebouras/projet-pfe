@@ -1,9 +1,11 @@
 package com.example.test1;
 
 import android.content.Intent;
+import android.security.identity.IdentityCredentialException;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -20,13 +22,17 @@ EditText TextName ;
             @Override
             public void onClick(View v) {
                 openhomepage();
-                String nom= TextName.getText().toString();
-                if (!nom.equals("")){
-                    Toast.makeText(getApplicationContext(),"Bienvenue " +nom  ,Toast.LENGTH_LONG).show();
-                }
-                else{
-                    Toast.makeText(getApplicationContext(),"nom et obligatoire"   ,Toast.LENGTH_LONG).show();
-                }
+
+                    String nom = TextName.getText().toString();
+                    if (!nom.equals("")) {
+                        Toast.makeText(getApplicationContext(), "Bienvenue " + nom, Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "nom et obligatoire", Toast.LENGTH_LONG).show();
+                    }
+
+
+
+
             }
         });
     }
