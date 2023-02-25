@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="single">
+ <item
+     android:id="@+id/nav_home"
+     android:title="home"
+     android:icon="@drawable/home_24"/>
+ <item
+     android:id="@+id/nav_client"
+     android:title="home"
+     android:icon="@drawable/person_black"/>
+ <item
+    android:id="@+id/nav_stock"
+    android:title="home"
+    android:icon="@drawable/stock"/>
+
+ <item
+    android:id="@+id/nav_challenge"
+    android:title="home"
+    android:icon="@drawable/competition_removebg_preview"/>
+ <item
+    android:id="@+id/nav_commande"
+    android:title="home"
+    android:icon="@drawable/home_24"/>
+ <item
+    android:id="@+id/nav_produit"
+    android:title="home"
+    android:icon="@drawable/home_24"/>
+
+</group>
+
+</menu>
