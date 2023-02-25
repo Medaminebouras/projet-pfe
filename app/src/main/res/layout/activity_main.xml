@@ -6,15 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:fitsSystemWindows="true">
-<!--<android.support.design.widget.NavigationView-->
-<!--    android:layout_width="wrap_content"-->
-<!--    android:layout_height="match_parent"-->
-<!--    android:id="@+id/nav_view"-->
-<!--    app:headerLayout="@layout/header"-->
-<!--    tools:ignore="MissingConstraints"-->
-<!--    app:menu="@menu/menu"-->
-<!--    android:layout_gravity="start"-->
-<!--    />-->
+
+
     <View
         android:id="@+id/topview"
         android:layout_width="0dp"
@@ -23,6 +16,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="205dp"
+        android:layout_height="81dp"
+        android:text="Connexion"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/topview"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.367"
+        app:layout_constraintStart_toStartOf="@+id/topview"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.739"
+        tools:ignore="MissingConstraints" />
+
     <View
         android:id="@+id/view4"
         android:layout_width="0dp"
@@ -30,7 +39,7 @@
         android:background="@drawable/wave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topview" />
+        app:layout_constraintTop_toBottomOf="@id/topview" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -40,21 +49,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/baseline_person_24" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="217dp"
-        android:layout_height="117dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="44dp"
-        android:text="Connexion"
-        android:textColor="#FFFFFF"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/topview"
-        app:layout_constraintTop_toTopOf="@+id/topview" />
 
     <EditText
         android:id="@+id/TextName"
@@ -82,7 +76,6 @@
         android:drawableStart="@drawable/lock"
         android:ems="10"
         android:hint="  Mots de passe"
-       
         android:inputType="textPassword"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,7 +95,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextPassword" />
-
 
     <TextView
         android:id="@+id/textView2"
@@ -149,13 +141,5 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <TextView
-        android:id="@+id/Erreurmessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="msg"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="516dp" />
 
 </android.support.constraint.ConstraintLayout>
