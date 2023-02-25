@@ -1,30 +1,43 @@
 package com.example.test1;
 
 import android.content.Intent;
-import android.security.identity.IdentityCredentialException;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
-public class MainActivity extends AppCompatActivity {
- Button button;
-EditText t ;
+import com.example.test1.ui.LoginTask;
 
-Toolbar toolbar;
+import java.util.concurrent.ExecutionException;
+
+public class MainActivity extends AppCompatActivity {
+    Button button;
+    EditText t;
+    Toolbar toolbar;
+    String res = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button=(Button) findViewById(R.id.button_con);
-        t=(EditText) findViewById(R.id.TextName);
+        button = (Button) findViewById(R.id.button_con);
+        t = (EditText) findViewById(R.id.TextName);
+        LoginTask dbTask = new LoginTask();
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try {
+                    String s =dbTask.execute("xcfd","password").get();
+                } catch (ExecutionException e) {
+                    throw new RuntimeException(e);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
 
                 openhomepage();
                 String nom = t.getText().toString();
@@ -36,8 +49,11 @@ Toolbar toolbar;
             }
         });
     }
-public void openhomepage(){
-      Intent intent= new Intent(this,homepage.class);
-      startActivity(intent);
-}
+
+
+
+    public void openhomepage() {
+        Intent intent = new Intent(this, homepage.class);
+        startActivity(intent);
+    }
 }
