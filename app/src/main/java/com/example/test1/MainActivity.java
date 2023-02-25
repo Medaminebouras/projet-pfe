@@ -21,15 +21,14 @@ EditText TextName ;
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 openhomepage();
-
-                    String nom = TextName.getText().toString();
-                    if (!nom.equals("")) {
-                        Toast.makeText(getApplicationContext(), "Bienvenue " + nom, Toast.LENGTH_LONG).show();
-                    } else {
-                        Toast.makeText(getApplicationContext(), "nom et obligatoire", Toast.LENGTH_LONG).show();
-                    }
-
+                String nom = TextName.getText().toString();
+                if (!nom.equals("")) {
+                    Toast.makeText(getApplicationContext(), "Bienvenue " + nom, Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "nom est obligatoire", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
